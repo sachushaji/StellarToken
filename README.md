@@ -1,2 +1,2 @@
 # StellarToken
-POC of Stellar Token ICO
+POC of Stellar Tokens
