@@ -1,0 +1,27 @@
+{
+  "name": "stellartoken",
+  "version": "1.0.0",
+  "description": "Demos of Stellar Token",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sachushaji/StellarToken.git"
+  },
+  "author": "Sachu Shaji Abraham",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sachushaji/StellarToken/issues"
+  },
+  "homepage": "https://github.com/sachushaji/StellarToken#readme",
+  "dependencies": {
+    "stellar-sdk": "^0.12.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.13.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0"
+  }
+}
