@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/sachushaji/StellarToken#readme",
   "dependencies": {
+    "request-promise": "^4.2.2",
     "stellar-sdk": "^0.12.0"
   },
   "devDependencies": {
