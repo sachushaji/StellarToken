@@ -1,7 +1,7 @@
 const StellarSdk = require('stellar-sdk');
 
 const server = new StellarSdk.Server('https://horizon-testnet.stellar.org');
-const accountId = 'GBBORXCY3PQRRDLJ7G7DWHQBXPCJVFGJ4RGMJQVAX6ORAUH6RWSPP6FM';
+const accountId = 'GA5KODDUMD5PJFMPK3QT77TF7H6ILLCCWGDFJZRPM7WGM55GMVSD2PA7';
 
 server.transactions()
   .forAccount(accountId)
@@ -18,3 +18,5 @@ server.transactions()
   .catch((err) => {
     console.log(err);
   });
+
+  // hash: 9218181b30fa77910bbfcc7af1c2402e757f2d3d34793b8536d0bf3c878db75d
