@@ -9,6 +9,7 @@ var routes = require('./routes/xlmtransfer');
 var checkbalance = require('./utils/checkbalance');
 var users = require('./routes/users');
 var txhistory = require('./utils/txhistory')
+var accountCreation =require('./utils/accountCreation')
 
 var app = express();
 
@@ -24,12 +25,16 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/',function(req,res) {
-    res.render('xlmtransfer')  
-})
+    res.render('xlmtransfer');  
+});
 
 app.get('/checkbalance',function(req,res) {
-  res.render('checkbalance')
-})
+  res.render('checkbalance');
+});
+
+app.get('/accountCreation',function(req,res) {
+  res.render('accountCreation',{publicKey:`${pair.publicKey()}` , privatekey:`${pair.secret()}`});
+});
 
 
 
@@ -39,6 +44,7 @@ app.get('/txhistory', txhistory.txhistory);
 
 app.post('/checkbalance', checkbalance.checkbalance);
 
+app.post('/accountCreation', accountCreation.accountCreation);
 
 app.listen(3000);
 console.log('Go to http://localhost:3000');
