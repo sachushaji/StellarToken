@@ -33,7 +33,7 @@ app.get('/checkbalance',function(req,res) {
 });
 
 app.get('/accountCreation',function(req,res) {
-  res.render('accountCreation',{publicKey:`${pair.publicKey()}` , privatekey:`${pair.secret()}`});
+  res.render('accountCreation',{publicKey:'' , privatekey:''});
 });
 
 

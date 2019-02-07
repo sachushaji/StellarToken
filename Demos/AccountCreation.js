@@ -3,9 +3,10 @@ const rq = require('request-promise');
 
 Stellar.Network.useTestNetwork();
 
-async function createNewAccount() {
+async function createNewAccount(res) {
   const pair = Stellar.Keypair.random();
   console.log(`Public key  = ${pair.publicKey()}\nPrivate key = ${pair.secret()}`);
+  
 }
 
 createNewAccount();

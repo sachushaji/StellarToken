@@ -95,16 +95,16 @@
 <br/>
 <br/>
 
-<form action="/accountCreation" method="POST">
+<form id="accountCreation">
     <div class="form-group">
         <div class="form-group">
-            <button type="submit" class="btn btn-default">Create Account</button>
+            <button id="createAccount" class="btn btn-default">Create Account</button>
         </div>
-      <input type="text" class="form-control" id="PublicKey" placeholder="<%publickey %>" name="PublicKey" readonly>
+      <input type="text" class="form-control" id="PublicKey" placeholder="<%= publicKey %>" name="PublicKey" readonly>
     </div>
     <div class="form-group">
 
-        <input type="text" class="form-control" id="PrivateKey" placeholder="<%privatekey %>" name="PrivateKey" readonly>
+        <input type="text" class="form-control" id="PrivateKey" placeholder="<%= privatekey %>" name="PrivateKey" readonly>
       </div>
 
 
@@ -126,6 +126,27 @@
   <p style="color:black; ">&copy;| Netobjex <a href="#">2019</a></p> 
 </footer>
 
+<script type="text/javascript">
+  $('#creatAccout').click(function(){
+    $("#accountCreation").submit();
+  });
+  $("#accountCreation").submit(function(e){
+   $.ajax({
+     type:'POST',
+     url:'/accountCreation',
+     dataType:'json',
+     success:function(data){
+       if(data.status==true){
+        $('#PublicKey').val(data.public);
+        $('#PrivateKey').val(data.private);
+       }},
+      error:function(data){
+        alert(data);
+      }
+    });
+  e.preventDefault();
+});
+</script>
+
 </body>
 </html>
-s
