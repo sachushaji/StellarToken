@@ -4,10 +4,11 @@ var favicon = require('static-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-const xlm = require('./utils/xlmtransfer');
+const xlmtransfer = require('./utils/xlmtransfer');
 var routes = require('./routes/xlmtransfer');
 var checkbalance = require('./utils/checkbalance');
 var users = require('./routes/users');
+var txhistory = require('./utils/txhistory')
 
 var app = express();
 
@@ -23,22 +24,18 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/',function(req,res) {
-    res.render('xlmtransfer')
-    
-})
-
-app.get('/txhistory',function(req,res) {
-  res.render('txhistory')
-  
+    res.render('xlmtransfer')  
 })
 
 app.get('/checkbalance',function(req,res) {
   res.render('checkbalance')
-  
 })
 
 
-app.post('/xlmtransfer', xlm.sendXLM);
+
+app.post('/xlmtransfer', xlmtransfer.sendXLM);
+
+app.get('/txhistory', txhistory.txhistory);
 
 app.post('/checkbalance', checkbalance.checkbalance);
 

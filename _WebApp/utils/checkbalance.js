@@ -1,8 +1,8 @@
-http =require('https');
+https =require('https');
 
 function checkbalance(req,res)
 {
-http.get('https://horizon-testnet.stellar.org/accounts/'+ req.body.BPublicKey,function(response){
+https.get('https://horizon-testnet.stellar.org/accounts/'+ req.body.BPublicKey,function(response){
     response.on('data',function(data)
     {
         full_data=JSON.parse(data.toString());

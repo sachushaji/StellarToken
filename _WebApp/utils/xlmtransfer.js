@@ -68,6 +68,7 @@ server.loadAccount(sourcePublicKey)
         console.log(JSON.stringify(transactionResult, null, 2));
         console.log('\nSuccess! View the transaction at: ');
         console.log(transactionResult._links.transaction.href);
+        
         res.redirect('/txhistory')
       })
       .catch(function(err) {
