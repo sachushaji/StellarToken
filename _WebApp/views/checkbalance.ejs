@@ -95,7 +95,7 @@
 <br/>
 <br/>
 
-<form action="/checkbalance" method="POST">
+<form id="checkbalance">
     <div class="form-group">
 
       <input type="text" class="form-control" id="BPublicKey" placeholder="Enter PublicKey" name="BPublicKey" required>
@@ -127,6 +127,25 @@
   <p style="color:black; ">&copy;| Netobjex <a href="#">2019</a></p> 
 </footer>
 
+<script type="text/javascript">
+ 
+  $("#checkbalance").submit(function(e){
+   $.ajax({
+     type:'POST',
+     url:'/checkbalance',
+     data:$(this).serialize(),
+     dataType:'json',
+     success:function(data){
+       if(data.status==true){
+        $('#balance').val(data.balance);
+       }},
+      error:function(data){
+        alert(data);
+      }
+    });
+  e.preventDefault();
+});
+</script>
+
 </body>
 </html>
-s

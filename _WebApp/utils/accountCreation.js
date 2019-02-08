@@ -10,7 +10,7 @@ async function createNewAccount(res) {
   console.log(`Public key  = ${pair.publicKey()}\nPrivate key = ${pair.secret()}`);
   const public = `${pair.publicKey()}`;
   const private = `${pair.secret()}`;
-  console.log(public);
+
   res.send({
     status:true,
     public:public,
