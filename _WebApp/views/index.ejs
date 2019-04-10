@@ -2,7 +2,7 @@
 <html lang="en" >
 <head>
 
-  <title>Check Balance</title>
+  <title>Stellar Wallet</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="bs/css/bootstrap.min.css">
@@ -11,7 +11,22 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="bs/js/bootstrap.min.js"></script>
   <style>
-  
+        ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+          text-decoration:none;
+          color: #fff;
+
+        }
+        
+        li {
+          float: left;
+          text-decoration:none;
+          color: #f5f6f7;
+        }
+
     body {
       font: 20px Montserrat, sans-serif;
       line-height: 1.8;
@@ -63,32 +78,26 @@
 
 <!-- Navbar -->
 <nav class="navbar navbar-default">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-	  <p> 
-      <a class="navbar-brand" href="#">Balance Check</a>| 
-	        </p>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right">
-
-      </ul>
-    </div>
-  </div>
-</nav>
+        <!-- <div class="container-fluid"> -->
+          <!-- <div class="navbar-header"> -->
+            <a class="navbar-brand" href="#">Stellar Wallet</a>
+          <!-- </div> -->
+          <ul class="nav navbar-nav" style="float:right;">
+            <li><a href="/accountCreation">Account Creation</a></li>
+            <li><a href="/xlmtransfer">Transfer</a></li>
+            <li><a href="/checkbalance">Check Balance</a></li>
+            <li><a href="/assetCreation">Asset Creation</a></li>            
+            <li><a href="/txhistory">Tranaction History</a></li>
+          </ul>
+        <!-- </div> -->
+      </nav>
 
 <!-- First Container -->
 <div class="container-fluid bg-1 " style="max-height:100%; max-width:100%">
  
 <div class="container text-center">
-    <a href="/" >
-      <span class="glyphicon glyphicon-home"></span>
-    </a>
+
+</div>
 
   
 
@@ -97,29 +106,19 @@
 <br/>
 <br/>
 
-<form id="checkbalance">
-    <div class="form-group">
 
-      <input type="text" class="form-control" id="BPublicKey" placeholder="Enter PublicKey" name="BPublicKey" required>
-    </div>
-    <div class="form-group">
-
-        <input type="text" class="form-control" id="balance" placeholder="" name="balance" disabled>
-      </div>
-
-    <div class="form-group">
-    <button type="submit" class="btn btn-default">Check</button>
-</div>
-  
 
 
 <br/>
+
 <br/>
 <br/>
-  </form>
-</div>
 
+<br/>
 
+<br/>
+
+<br/>
 
 
 </div>
@@ -128,26 +127,6 @@
 <footer class="navbar navbar-default text-center">
   <p style="color:black; ">&copy;| Netobjex <a href="#">2019</a></p> 
 </footer>
-
-<script type="text/javascript">
- 
-  $("#checkbalance").submit(function(e){
-   $.ajax({
-     type:'POST',
-     url:'/checkbalance',
-     data:$(this).serialize(),
-     dataType:'json',
-     success:function(data){
-       if(data.status==true){
-        $('#balance').val(data.balance);
-       }},
-      error:function(data){
-        alert(data);
-      }
-    });
-  e.preventDefault();
-});
-</script>
 
 </body>
 </html>

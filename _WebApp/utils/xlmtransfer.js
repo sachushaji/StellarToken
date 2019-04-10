@@ -69,7 +69,7 @@ server.loadAccount(sourcePublicKey)
         console.log('\nSuccess! View the transaction at: ');
         console.log(transactionResult._links.transaction.href);
         
-        res.redirect('/txhistory')
+        res.redirect('/txhistory');
       })
       .catch(function(err) {
         console.log('An error has occured:');

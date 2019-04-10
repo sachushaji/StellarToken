@@ -8,8 +8,9 @@ const xlmtransfer = require('./utils/xlmtransfer');
 var routes = require('./routes/xlmtransfer');
 var checkbalance = require('./utils/checkbalance');
 var users = require('./routes/users');
-var txhistory = require('./utils/txhistory')
-var accountCreation =require('./utils/accountCreation')
+var txhistory = require('./utils/txhistory');
+var accountCreation =require('./utils/accountCreation');
+var assetCreation = require('./utils/assetCreation');
 
 var app = express();
 
@@ -25,9 +26,15 @@ app.use(bodyParser.urlencoded());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-
-
 app.get('/',function(req,res) {
+  res.render('index');  
+});
+
+app.get('/assetCreation',function(req,res) {
+  res.render('assetCreation');  
+});
+
+app.get('/xlmtransfer',function(req,res) {
     res.render('xlmtransfer');  
 });
 
@@ -39,6 +46,9 @@ app.get('/accountCreation',function(req,res) {
   res.render('accountCreation',{publicKey:'' , privatekey:''});
 });
 
+app.get('/assetCreation',function(req,res) {
+  res.render('assetCreation',{IssuersPrivateKey:'' , ReceversPrivateKey:'',AssetCode:'' , Limit:''});
+});
 
 
 app.post('/xlmtransfer', xlmtransfer.sendXLM);
@@ -46,6 +56,8 @@ app.post('/xlmtransfer', xlmtransfer.sendXLM);
 app.post('/checkbalance', checkbalance.checkbalance);
 
 app.post('/accountCreation', accountCreation.accountCreation);
+
+app.post('/assetCreation', assetCreation.assetCreation);
 
 app.get('/txhistory', txhistory.txhistory);
 
