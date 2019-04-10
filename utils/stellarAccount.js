@@ -1,3 +1,7 @@
+/**
+ * @Author Sachu Shaji Abraham <sachushajiabraham@gmail.com>
+ */
+
 const Stellar = require('stellar-sdk');
 
 const { isProduction } = process.env;

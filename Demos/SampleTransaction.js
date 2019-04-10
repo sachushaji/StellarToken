@@ -1,3 +1,7 @@
+/**
+ * @Author Sachu Shaji Abraham <sachushajiabraham@gmail.com>
+ */
+
 // Create, sign, and submit a transaction using JS Stellar SDK.
 
 // Assumes that you have the following items:

@@ -1,3 +1,7 @@
+/**
+ * @Author Sachu Shaji Abraham <sachushajiabraham@gmail.com>
+ */
+
 // Create, sign, and submit a transaction using JS Stellar SDK.
 
 // Assumes that you have the following items:
@@ -20,17 +24,17 @@ const StellarSdk = require('stellar-sdk');
 // var StellarSdk = require('stellar-sdk');
 
 // The source account is the account we will be signing and sending from.
-var sourceSecretKey = 'SBRFUKERGXPRJEWPLJSIKRIG3O45BGAKGVKNU7KW2YTZ7CEZYECOHLEN';
+const sourceSecretKey = 'SBRFUKERGXPRJEWPLJSIKRIG3O45BGAKGVKNU7KW2YTZ7CEZYECOHLEN';
 
 // Derive Keypair object and public key (that starts with a G) from the secret
-var sourceKeypair = StellarSdk.Keypair.fromSecret(sourceSecretKey);
-var sourcePublicKey = sourceKeypair.publicKey();
+const sourceKeypair = StellarSdk.Keypair.fromSecret(sourceSecretKey);
+const sourcePublicKey = sourceKeypair.publicKey();
 
-var receiverPublicKey = 'GDTBPYZLEXIHUFMCYUHV4LBT6VJGJQOVYPCZMMCKUKSZ7OARBFUDWJG6';
+const receiverPublicKey = 'GDTBPYZLEXIHUFMCYUHV4LBT6VJGJQOVYPCZMMCKUKSZ7OARBFUDWJG6';
 
 // Configure StellarSdk to talk to the horizon instance hosted by Stellar.org
 // To use the live network, set the hostname to 'horizon.stellar.org'
-var server = new StellarSdk.Server('https://horizon-testnet.stellar.org');
+const server = new StellarSdk.Server('https://horizon-testnet.stellar.org');
 
 // Uncomment the following line to build transactions for the live network. Be
 // sure to also change the horizon hostname.
@@ -40,8 +44,8 @@ StellarSdk.Network.useTestNetwork();
 // Transactions require a valid sequence number that is specific to this account.
 // We can fetch the current sequence number for the source account from Horizon.
 server.loadAccount(sourcePublicKey)
-  .then(function(account) {
-    var transaction = new StellarSdk.TransactionBuilder(account)
+  .then((account) => {
+    const transaction = new StellarSdk.TransactionBuilder(account)
       // Add a payment operation to the transaction
       .addOperation(StellarSdk.Operation.payment({
         destination: receiverPublicKey,
@@ -69,16 +73,16 @@ server.loadAccount(sourcePublicKey)
     // Submit the transaction to the Horizon server. The Horizon server will then
     // submit the transaction into the network for us.
     server.submitTransaction(transaction)
-      .then(function(transactionResult) {
+      .then((transactionResult) => {
         console.log(JSON.stringify(transactionResult, null, 2));
         console.log('\nSuccess! View the transaction at: ');
         console.log(transactionResult._links.transaction.href);
       })
-      .catch(function(err) {
+      .catch((err) => {
         console.log('An error has occured:');
         console.log(err);
       });
   })
-  .catch(function(e) {
+  .catch((e) => {
     console.error(e);
   });

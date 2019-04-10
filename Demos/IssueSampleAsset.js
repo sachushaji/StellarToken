@@ -1,3 +1,7 @@
+/**
+ * @Author Sachu Shaji Abraham <sachushajiabraham@gmail.com>
+ */
+
 const StellarSdk = require('stellar-sdk');
 
 StellarSdk.Network.useTestNetwork();
