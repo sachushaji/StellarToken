@@ -1,0 +1,22 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.13.5
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  SNYK-JS-AXIOS-174505:
+    - stellar-sdk > axios:
+        patched: '2019-08-20T07:06:59.694Z'
+  SNYK-JS-LODASH-450202:
+    - stellar-sdk > lodash:
+        patched: '2019-08-20T07:06:59.694Z'
+    - request-promise > request-promise-core > lodash:
+        patched: '2019-08-20T07:06:59.694Z'
+    - stellar-sdk > stellar-base > lodash:
+        patched: '2019-08-20T07:06:59.694Z'
+    - stellar-sdk > stellar-base > js-xdr > lodash:
+        patched: '2019-08-20T07:06:59.694Z'
+  'npm:uglify-js:20151024':
+    - jade > constantinople > uglify-js:
+        patched: '2019-08-20T07:06:59.694Z'
+    - jade > transformers > uglify-js:
+        patched: '2019-08-20T07:06:59.694Z'
