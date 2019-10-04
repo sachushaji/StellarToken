@@ -20,3 +20,8 @@ patch:
         patched: '2019-08-20T07:06:59.694Z'
     - jade > transformers > uglify-js:
         patched: '2019-08-20T07:06:59.694Z'
+  SNYK-JS-HTTPSPROXYAGENT-469131:
+    - snyk > proxy-agent > https-proxy-agent:
+        patched: '2019-10-04T07:32:26.600Z'
+    - snyk > proxy-agent > pac-proxy-agent > https-proxy-agent:
+        patched: '2019-10-04T07:32:26.600Z'
