@@ -15,6 +15,14 @@ patch:
         patched: '2019-08-20T07:06:59.694Z'
     - stellar-sdk > stellar-base > js-xdr > lodash:
         patched: '2019-08-20T07:06:59.694Z'
+    - snyk > @snyk/snyk-cocoapods-plugin > @snyk/dep-graph > lodash:
+        patched: '2019-10-12T07:46:40.034Z'
+    - snyk > @snyk/snyk-cocoapods-plugin > @snyk/dep-graph > graphlib > lodash:
+        patched: '2019-10-12T07:46:40.034Z'
+    - snyk > @snyk/snyk-cocoapods-plugin > @snyk/cocoapods-lockfile-parser > @snyk/dep-graph > lodash:
+        patched: '2019-10-12T07:46:40.034Z'
+    - snyk > @snyk/snyk-cocoapods-plugin > @snyk/cocoapods-lockfile-parser > @snyk/dep-graph > graphlib > lodash:
+        patched: '2019-10-12T07:46:40.034Z'
   'npm:uglify-js:20151024':
     - jade > constantinople > uglify-js:
         patched: '2019-08-20T07:06:59.694Z'
