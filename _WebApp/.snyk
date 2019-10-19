@@ -23,6 +23,32 @@ patch:
         patched: '2019-10-12T07:46:49.993Z'
     - snyk > @snyk/snyk-cocoapods-plugin > @snyk/cocoapods-lockfile-parser > @snyk/dep-graph > graphlib > lodash:
         patched: '2019-10-12T07:46:49.993Z'
+    - snyk > snyk-nuget-plugin > dotnet-deps-parser > lodash:
+        patched: '2019-10-19T09:28:16.423Z'
+    - stellar-sdk > lodash:
+        patched: '2019-10-19T09:28:16.423Z'
+    - stellar-sdk > stellar-base > lodash:
+        patched: '2019-10-19T09:28:16.423Z'
+    - snyk > @snyk/dep-graph > lodash:
+        patched: '2019-10-19T09:28:16.423Z'
+    - snyk > snyk-go-plugin > graphlib > lodash:
+        patched: '2019-10-19T09:28:16.423Z'
+    - snyk > snyk-nodejs-lockfile-parser > graphlib > lodash:
+        patched: '2019-10-19T09:28:16.423Z'
+    - snyk > @snyk/snyk-cocoapods-plugin > @snyk/dep-graph > lodash:
+        patched: '2019-10-19T09:28:16.423Z'
+    - request-promise > request-promise-core > lodash:
+        patched: '2019-10-19T09:28:16.423Z'
+    - stellar-sdk > stellar-base > js-xdr > lodash:
+        patched: '2019-10-19T09:28:16.423Z'
+    - snyk > @snyk/dep-graph > graphlib > lodash:
+        patched: '2019-10-19T09:28:16.423Z'
+    - snyk > @snyk/snyk-cocoapods-plugin > @snyk/dep-graph > graphlib > lodash:
+        patched: '2019-10-19T09:28:16.423Z'
+    - snyk > @snyk/snyk-cocoapods-plugin > @snyk/cocoapods-lockfile-parser > @snyk/dep-graph > lodash:
+        patched: '2019-10-19T09:28:16.423Z'
+    - snyk > @snyk/snyk-cocoapods-plugin > @snyk/cocoapods-lockfile-parser > @snyk/dep-graph > graphlib > lodash:
+        patched: '2019-10-19T09:28:16.423Z'
   'npm:uglify-js:20151024':
     - jade > constantinople > uglify-js:
         patched: '2019-08-20T07:06:59.694Z'
@@ -33,3 +59,6 @@ patch:
         patched: '2019-10-04T07:32:26.600Z'
     - snyk > proxy-agent > pac-proxy-agent > https-proxy-agent:
         patched: '2019-10-04T07:32:26.600Z'
+  'npm:uglify-js:20150824':
+    - jade > transformers > uglify-js:
+        patched: '2019-10-19T09:28:16.423Z'
