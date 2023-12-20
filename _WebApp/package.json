@@ -19,8 +19,8 @@
     "morgan": "^1.9.1",
     "request-promise": "^4.2.4",
     "static-favicon": "~1.0.0",
-    "stellar-sdk": "^0.13.0",
-    "snyk": "^1.290.1"
+    "stellar-sdk": "^11.0.0",
+    "snyk": "^1.996.0"
   },
   "snyk": true
 }
