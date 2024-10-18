@@ -20,7 +20,7 @@
   "homepage": "https://github.com/sachushaji/StellarToken#readme",
   "dependencies": {
     "request-promise": "^4.2.6",
-    "stellar-sdk": "^11.3.0",
+    "stellar-sdk": "^12.0.1",
     "snyk": "^1.996.0"
   },
   "devDependencies": {
