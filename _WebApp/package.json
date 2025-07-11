@@ -15,12 +15,12 @@
     "express": "^4.16.4",
     "http": "0.0.0",
     "https": "^1.0.0",
-    "jade": "~1.8.0",
+    "jade": "~1.11.0",
     "morgan": "^1.9.1",
-    "request-promise": "^4.2.4",
+    "request-promise": "^4.2.6",
     "static-favicon": "~1.0.0",
-    "stellar-sdk": "^0.13.0",
-    "snyk": "^1.996.0"
+    "stellar-sdk": "^13.3.0",
+    "snyk": "^1.1297.3"
   },
   "snyk": true
 }
